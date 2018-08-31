@@ -10,11 +10,11 @@ module.exports = function(app) {
     //api gets request
 
 
-    app.get("/api/friends", function(req, res) {
+    app.get('/api/friends', function(req, res) {
         res.json(friends);
     });
 
-    app.post("/api/friends", function(req, res) {
+    app.post('/api/friends', function(req, res) {
         //our server will respond to request and let users know if they have a match or not
         var bestMatch = {
 			name: "",
