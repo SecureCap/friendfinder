@@ -15,6 +15,7 @@ module.exports = function(app) {
     });
 
     app.post('/api/friends', function(req, res) {
+		res.json(friends)
         //our server will respond to request and let users know if they have a match or not
         var bestMatch = {
 			name: "",
