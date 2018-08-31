@@ -1,7 +1,7 @@
 //load data
 //we are linking our routes to a series of "data" sources that hold arrays of information on table-data, waitinglist,
 
-var friendList = require("../data/friends");
+var friends = require("../data/friends.js");
 
 
 //routing
