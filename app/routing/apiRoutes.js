@@ -30,7 +30,7 @@ module.exports = function(app) {
 		var totalDifference = 0;
 
 		//loop through the friends data array of objects to get each friends scores
-		for(var i = 0; i < friendsData.length-1; i++){
+		for(var i = 0; i < friendsArray.length-1; i++){
 			console.log(friends[i].name);
 			totalDifference = 0;
 
