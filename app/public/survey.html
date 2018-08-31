@@ -2,6 +2,8 @@
 <html lang="en"><head>
     <meta charset="UTF-8">
     <title>FriendFinder</title>
+    <!-- title bar favicon -->
+    <link rel="shortcut icon" type="image" href="../images/favicon.ico">
   
     <!-- Latest compiled and minified CSS & JS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
@@ -187,6 +189,7 @@
     </div>
   
     <script type="text/javascript">
+
       // Chosen CSS
       var config = {
         ".chosen-select": {},
@@ -203,13 +206,16 @@
           width: "95%"
         }
       };
+
+
   
       for (var selector in config) {
         $(selector).chosen(config[selector]);
       }
   
       // Capture the form inputs
-      $("#submit").on("click", function(){
+      $("#submit").on("click", function(event){
+        event.preventDefault();
         //isValid is automatically set to true
         var isValid = true;
         
@@ -239,8 +245,8 @@
 	    		]
 	    	}
 	    	// Grab the URL of the website
-	    	var directoryURL = 'https://whispering-tor-22795.herokuapp.com/';
-		    $.post(directoryURL, function(userData){
+	    	//var directoryURL = 'https://whispering-tor-22795.herokuapp.com/';
+		    $.post("/api/friends", function(userData){
 		    	// Grab the result from the AJAX post so that the best match's name and photo are displayed.
 		    	$("#matchName").text(data.name);
 		    	$('#matchImg').attr("src", data.photo);

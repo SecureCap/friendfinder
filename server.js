@@ -14,7 +14,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(bodyParser.text());
 app.use(bodyParser.json({type:'application/vnd.api+json'}));
-
+app.use(express.static("app/public"));
 
 //router the below points our server to a series of "route" files
 //these routes gives the server a map of how to respond when users visit or request data from various URLs
